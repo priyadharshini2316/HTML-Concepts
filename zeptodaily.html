@@ -1,0 +1,346 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zepto</title>
+    <style>
+       
+        h2{
+            color: rgb(117, 32, 198);
+            font-size: 40px;
+           font-family:Verdana, Geneva, Tahoma, sans-serif; 
+           display: inline;
+          
+        }
+        .header input{
+         display: inline;
+         font-size:20px ;
+         border-radius: 5px;
+         
+        }
+        .one{ padding-left:55px; 
+            display: inline;}
+        .two{
+            display: inline;
+            padding-left: 70px;
+    
+        }
+        h1{
+            display: inline;
+            font-size:36px;
+        }
+        .three{
+            display:flex;
+           padding-top: 50px;
+        }
+        .three img{
+            padding-left: 29px;
+        }
+        .flex-container{
+            padding-left:130px;
+            padding-right: 20px;
+        }
+        h3{font-size: 20px;}
+        .three img:hover,h3:hover{
+          border-color:rgb(218, 187, 247);
+        }
+        .first{
+            height: 100px;
+            background-color:plum;
+            background-image:linear-gradient(plum,white)
+        }
+        #main{
+            padding-right: 110px;
+        
+
+        }
+        .categories{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        
+        }
+        .category-card{
+            background-color: plum;
+            border-radius: 15px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            margin: 40px;
+            cursor: pointer;
+            
+        }
+        .category-card img{
+            height: 60px;
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            padding: 5px;
+            
+            
+        }
+        
+        .category-card h3{
+            font-size: 15px;
+            
+        }
+    
+        
+        .sliders{
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            background-color:white;
+            position: relative;
+        }
+
+        .slides{
+            display: flex;
+            width: max-content;
+            animation: slideAnim 8s linear infinite;
+        }
+        .slides img{
+            padding-top:10px;
+            padding-bottom: 10px;
+            flex-shrink: 0;
+            border-radius: 30px;
+            padding-right: 10px;
+            
+        }
+        @keyframes slideAnim{
+        0%{transform: translateX(0);}
+        100%{ transform: translateX(-50%);}
+        }
+        @media (max-width: 768px){
+            .slides img{ height 960px;}
+        }
+        p{padding-left: 260px;}
+        #main{padding-left: 10px;}
+        .section-title {
+  padding: 10px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+
+.product-card {
+  background:rgb(248, 241, 241);
+  border-radius: 10px;
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  margin: 50px;
+
+}
+
+.product-card img {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+.product-card:hover{
+    background-color: rgb(218, 218, 218);
+
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  padding-left: 2px;
+}
+
+.product-card button {
+  background: #e40046;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #c4003d;
+}
+
+.image{ display: flex;}
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="first">
+        <h2 style="padding-left: 10px;">Zepto</h2>
+        <div class="one">
+        <input type="search" placeholder="Search for product" size="80px">
+        </div>
+        <div class="two">
+            <img src="motorcycle_15300698.png" width="50px" height="50px">
+            <h1>Delivery in 7 Mins</h1>
+        </div>
+        </div>
+    </div>
+    <div class="flex-container">
+            <div class="three">
+             <img src="bag_14016747.png" width="50px" height="40px">
+            <h3>All</h3>
+            <img src="icons8-cup-48.png"width="50px" height="40px">
+            <h3>Cafe</h3>
+             <img src="icons8-knife-and-spatchula-50.png" width="50px" height="40px">
+             <h3>Home</h3>
+             <img src="rubber-duck.png" width="50px" height="40px">
+             <h3>Toys</h3>
+             <img src="icons8-offer-50.png" width="50px" height="40px">
+             <h3>Deal zone</h3>
+             <img src="icons8-apple-fruit-48.png" width="50px" height="40px">
+             <h3>Fresh</h3>
+             <img src="icons8-headset-64.png" width="50px" height="40px">
+             <h3>Electronics</h3>
+             <img src="icons8-makeup-brush-100.png" width="50px" height="40px">
+             <h3>Beauty</h3>
+             <img src="icons8-fashion-24.png" width="50px" height="40px">
+             <h3>Fashion</h3>
+            </div>
+            <br>
+            <br>
+            <div id="main">
+                
+                <div class="categories">
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/98df9311-7dc6-44ab-92e6-fca8fdd4f23c/Tomato-Local.jpeg "alt="vegetable" >
+                        
+                        <h3>vegetables</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/5902997a-d656-4ae7-af57-d824e847862c/Orange-Imported.jpeg" alt="fruits">
+                        <h3>Fruits</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/9c45acfa-024c-4400-b46e-098580358421/Mango-Banganapalli.jpeg"alt="Mango" >
+                        <h3>Mangos & Melons</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/267ab85f-24b7-4702-b304-4cb1d81e9bd2/Spinach-Cleaned-without-roots.jpeg"alt="leafy">
+                        <h3>Leafy</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1000,ar-1000-1000,pr-true,f-auto,q-80/cms/product_variant/e03746ab-e4eb-4be3-a6be-7ab04aca29c2/Zep-Cake-Mousee-Orange-Chocolate.jpeg" alt="desert">
+                        <h3>Desert</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-2400-2400,pr-true,f-auto,q-80/cms/product_variant/18d502d4-00ba-4533-99e3-ae817db3f361/Classic-Cold-Coffee.jpeg">
+                        <h3>Zepto
+                            Cafe
+                        </h3>
+                    </div>
+                </div>
+                <p>
+                    <img src="WhatsApp Image 2025-06-06 at 10.57.08 AM (1).jpeg">
+                </p>
+            <br>
+            <img src="https://cdn.zeptonow.com/production/tr:w-1280,ar-3840-705,pr-true,f-auto,q-80/inventory/banner/4ea3de05-f469-4df2-9548-db9c9863dfdf.png">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="image">
+                <div class="four"><img src="https://cdn.zeptonow.com/production/tr:w-1280,ar-2368-528,pr-true,f-auto,q-80/inventory/banner/eaff67d6-aa53-40fe-a6ba-38793acdd518.png" width="600px" height="300px" style="padding-right: 10px;"></div>
+                <div class="five"><img src="https://cdn.zeptonow.com/production/tr:w-1280,ar-2368-528,pr-true,f-auto,q-80/inventory/banner/874d9674-2f4f-4f60-bc5b-9fb52084a738.png"  width="600px" height="300px" style="padding-left: 10px;"></div>
+            </div>
+            </div>  
+            <div class="sliders">
+            <div class="slides">
+     <img src="1storder.jpeg"width="310px" >
+     <img src="veg 3.jpeg">
+     <img src="melon.jpeg">
+     <img src="icecreme.jpeg">
+     <img src="dryfruits.jpg"width="300px" height="300px">      
+            </div>
+            </div>
+            <h2 class="section-title"> Recommended for you</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/05461b8c-b3a4-4549-88cb-a0ca20f53b55/Apple-Royal-Gala.jpeg" alt="Apple">
+                    <h3>Apple</h3>
+                    <p>₹200 / 1KG</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/74325fc4-5b13-4bbb-98a8-cd25df7167e6/Fresh-Onion.jpeg" alt="Onion">
+                    <h3>Onion</h3>
+                    <p>₹30 / 500g</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/c371056c-cd1b-42ab-af7f-fe284abee419/Milky-Mist-Lactose-Free-Milk.jpg" alt="Milk">
+                    <h3>Milk</h3>
+                    <p>₹22 / 1L</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-501,ar-501-501,pr-true,f-auto,q-80/cms/product_variant/20ba9da9-8073-4c76-adf5-232e90412f6e/Gourmet-Garden-Organic-Garlic.jpg" alt="Garlic">
+                    <h3>Garlic</h3>
+                    <p>₹160 / 1KG</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-2500-2500,pr-true,f-auto,q-80/cms/product_variant/822dafe6-d7cb-4935-8143-3a873f270931/Eggoz-Protein-Rich-Farm-Fresh-White-Eggs.jpeg" alt="Egg">
+                    <h3>Egg</h3>
+                    <p>₹60 / dozen</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-400,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/e44c5b03-537c-4bd9-b9c6-db11e9619260/Britannia-Milk-Slice-White-Bread.jpeg" alt="Bread">
+                    <h3>Bread</h3>
+                    <p>₹40 / 1pack</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-1500-1500,pr-true,f-auto,q-80/cms/product_variant/447b2e71-f57e-4d13-b3f4-15aa347beed6/Cookie-Man-Hand-Pound-Chocolate-Cookies-Biscuits.jpg" alt="Cookie">
+                    <h3>Cookie</h3>
+                    <p>₹40 / 4pieces</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/b7563846-4b60-4886-b18c-c594cf317a35/Coconut-1-pc-Combo.jpeg" alt="Coconut">
+                    <h3>Coconut</h3>
+                    <p>₹23 / 1 piece</p>
+                    <button>Add</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-400,ar-3000-3000,pr-true,f-auto,q-80/cms/product_variant/775f7dfe-9459-4d3b-8c21-74c8388a8ff7/Grapes-Green-Seedless.jpeg" alt="Grapes">
+                <h3>Grapes</h3>  
+                <p>₹104 / 500g</p>      
+                <button>Add</button>   
+                 </div>
+                 <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1280,ar-5000-5000,pr-true,f-auto,q-80/cms/product_variant/3554079f-7eec-465d-9a89-c69a62ba748d/Kwality-Wall-s-Magnum-Chocolate-Truffle-Ice-Cream-Stick.jpeg">
+                    <h3>Chocolate Truffle</h3>
+                    <p>₹70 / 63g</p>
+                    <button>Add</button>
+                 </div>
+                 <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-400,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/e619657d-ce45-4094-9508-cad58d6be346/Coca-Cola-Soft-Drink.jpeg">
+                    <h3>Coca cola soft drink</h3>
+                    <p>₹100 / 2.25L</p>
+                    <button>Add</button>
+                 </div>
+                 <div class="product-card">
+                    <img src="https://cdn.zeptonow.com/production/ik-seo/tr:w-1200,ar-1200-1200,pr-true,f-auto,q-80/cms/product_variant/ae480e58-87ac-436d-875b-6c2c9f041eed/Bingo-Original-Style-Chilli-Sprinkled-Flat-Cut-Spicy-Potato-Chips-Pack-for-Snacks.jpeg">
+                    <h3>Bingo</h3>
+                    <p>₹76 / 45g</p>
+                    <button>Add</button>
+                 </div>
+            </div>
+        </body>            
+</html>
